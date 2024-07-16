@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice-Enabled Geospatial Map</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>    
+    
+    <link rel="stylesheet" href="../src/styles/main.css">
+    <link rel="stylesheet" href="../src/styles/leaflet-routing-machine.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-geosearch/dist/geosearch.js"></script>
+</head>
+<body>
+
+    <!-- A floating api for speach search and search -->
+
+    <div id="floating-api">
+        <div id="search">
+            <input type="text" id="search-input" placeholder="Search for a place">
+            <button id="search-button" onclick="searchPlace()">Search</button>
+        </div>
+        <div id="voice-search">
+            <button id="voice-search-button" onclick="startVoiceRecognition()">Voice Search</button>
+        </div>
+
+        <div id="voice-command"></div>
+    </div>
+
+    <aside id="menubar">
+        <h2>Voice Commands</h2>
+        <ul>
+            <li><a href="#" onclick="zoomIn()">Zoom in</a></li>
+            <li><a href="#" onclick="zoomOut()">Zoom out</a></li>
+            <li><a href="#" onclick="zoomToLocation()">Zoom to location</a></li>
+            <li><a href="#" onclick="zoomToCountry()">Zoom to country</a></li>
+            <li><a href="#" onclick="zoomToCity()">Zoom to city</a></li>
+            <li><a href="#" onclick="zoomToStreet()">Zoom to street</a></li>
+            <li><a href="#" onclick="zoomToLandmark()">Zoom to landmark</a></li>
+            <li><a href="#" onclick="zoomToPlace()">Zoom to place</a></li>
+            <li><a href="#" onclick="zoomToAddress()">Zoom to address</a></li>
+            <li><a href="#" onclick="zoomToCoordinates()">Zoom to coordinates</a></li>
+            <li><a href="#" onclick="zoomToLatitude()">Zoom to latitude</a></li>
+            <li><a href="#" onclick="zoomToLongitude()">Zoom to longitude</a></li>
+
+            <!-- Fillers -->
+
+            <li><a href="#" onclick="zoomToNorth()">Zoom to north</a></li>
+            <li><a href="#" onclick="zoomToSouth()">Zoom to south</a></li>
+            <li><a href="#" onclick="zoomToEast()">Zoom to east</a></li>
+            <li><a href="#" onclick="zoomToWest()">Zoom to west</a></li>
+            <li><a href="#" onclick="findRestaurant()">Find restaurant</a></li>
+            <li><a href="#" onclick="findHotel()">Find hotel</a></li>
+            <li><a href="#" onclick="findHospital()">Find hospital</a></li>
+            <li><a href="#" onclick="findSchool()">Find school</a></li>
+            <li><a href="#" onclick="findCafe()">Find cafe</a></li>
+            <li><a href="#" onclick="findBar()">Find bar</a></li>
+            <li><a href="#" onclick="findMuseum()">Find museum</a></li>
+        </ul>
+    </aside>
+    <div id="map-container">
+        <div id="app">
+            <h1>Voice-Enabled Geospatial Map</h1>
+            <div id="map"></div>
+            <div id="voice-command"></div>
+        </div>
+    </div>
+
+    <script src="../scripts/annyang.js"></script>
+    <script src="../scripts/leaflet.js"></script>
+    <script src="../scripts/leaflet-geosearch.js"></script>
+    <script src="../scripts/leaflet-routing-machine.js"></script>
+    <script src="../scripts/map.js"></script>
+    <script src="../scripts/voiceRecognition.js"></script>
+    <script src="../scripts/commandHandler.js"></script>
+    <script src="../scripts/app.js"></script>
+</body>
+</html>
