@@ -19,4 +19,4 @@ My Voice Map App is designed to provide an interactive mapping experience where 
 
 1. Clone the repository to your local machine.
    ```bash
-   git clone https://github.com/your-username/my-voice-map-app.git
+   git clone https://github.com/caffeinechic/my-voice-map-app.git
